@@ -21,15 +21,15 @@ def convert_time_to_index(spike_times, dt):
 
 
 def convert_time_to_train(spike_times, max_time, dt):
-    spike_index = convert_time_to_index(spike_times, dt)
-    max_index = convert_time_to_index(max_time, dt) 
+    spike_bin_index = convert_time_to_index(spike_times, dt)
+    max_bin_index = convert_time_to_index(max_time, dt)
 
-    # choose spike index < max_index
-    spike_index = spike_index[spike_index < max_index]
+    # choose spike bin index < max_bin_index
+    spike_bin_index = spike_bin_index[spike_bin_index < max_bin_index]
 
     # generate spike train
-    spike_train = np.zeros(max_index)
-    for i in spike_index:
+    spike_train = np.zeros(max_bin_index)
+    for i in spike_bin_index:
         spike_train[i] += 1
     
     return spike_train
