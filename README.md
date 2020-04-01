@@ -1,7 +1,7 @@
 ## calculate synchrony index 
 according to Shlens, 2006, J Neurosci, The structure of multi-neuron firing patterns
 
-## How to use Matlab code?
+## How to use (Matlab version)?
 1. Load spike times of two cells
 2. Decide max time 
 3. Decide time bin (dt). For this, heck inter-spike intervals (ISI) and choose dt << ISI
